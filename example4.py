@@ -72,15 +72,6 @@ if __name__ == '__main__':
 
     string_block = String.load("my-block-atom-text")
 
-    def deploy():
-        deployment = Deployment.build_from_flow(
-            flow=main_async,
-            name="prefect-example-deployment"
-        )
-        deployment.apply()
-
-    deploy()
-
     # main_async.with_options(result_storage=LocalFileSystem())
     loop = asyncio.new_event_loop()
     loop.run_until_complete(main_async())
