@@ -6,8 +6,7 @@ from prefect import get_run_logger
 from prefect.artifacts import create_link_artifact, create_table_artifact
 
 
-# 8b:0e:53:70:84:75:52:a6:73:f4:6f:6e:d8:9f:30:c7
-@task(persist_result=True, result_storage_key="func1-{parameters[param]}.json")
+@task(persist_result=False, result_storage_key="func1-{parameters[param]}.json")
 # @task(persist_result=True, result_storage_key="{flow_run.flow_name}_{flow_run.name}_func1.json")
 async def func1(param, data_table: dict):
     logger = get_run_logger()
