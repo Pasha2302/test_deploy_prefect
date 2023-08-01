@@ -1,0 +1,50 @@
+###
+### A complete description of a Prefect Deployment for flow 'Main_Async'
+###
+name: test-deployment
+description: null
+version: dfe3477936e7624bbc9d946bc4655524
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Main_Async
+manifest_path: null
+storage:
+  repository: https://github.com/Pasha2302/test_deploy_prefect.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 905645b9-ade6-424b-9e66-e577e35111f3
+  _block_document_name: prefect-repo2302
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: example4.py:main_async
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-08-01T18:09:19.875072+00:00'
+triggers: []
