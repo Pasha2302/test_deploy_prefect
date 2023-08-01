@@ -67,7 +67,6 @@ async def main_async():
 
 
 if __name__ == '__main__':
-    from prefect.deployments import Deployment
     from prefect.blocks.system import String
 
     string_block = String.load("my-block-atom-text")
