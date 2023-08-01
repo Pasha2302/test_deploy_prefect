@@ -62,15 +62,8 @@ async def main_async():
         with open('text_data_test.txt', 'a', encoding='utf-8') as file:
             file.write(f"{data}\n")
 
-    msg = string_block.value
-    print(msg)
-
 
 if __name__ == '__main__':
-    from prefect.blocks.system import String
-
-    string_block = String.load("my-block-atom-text")
-
     # main_async.with_options(result_storage=LocalFileSystem())
     loop = asyncio.new_event_loop()
     loop.run_until_complete(main_async())
